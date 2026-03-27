@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>INAYA services SRL - Toiture, façade et rénovation à Wallonie, la Flandre et Luxembourg</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fafafa;color:#1a1a1a;line-height:1.6}
+.container{width:90%;max-width:1200px;margin:auto}
+header{position:sticky;top:0;background:#ffffff;border-bottom:2px solid #6b21a8;z-index:1000}
+.header-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:20px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-box{background:linear-gradient(135deg,#6b21a8,#f97316);color:#fff;font-weight:bold;padding:10px 14px;border-radius:8px;font-size:1.2rem}
+.logo-text{font-weight:bold;font-size:1.4rem;color:#6b21a8}
+.logo small{display:block;color:#666;font-size:.8rem}
+nav{display:flex;gap:10px;flex-wrap:wrap}
+nav a{background:#6b21a8;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:14px;box-shadow:0 4px 10px rgba(0,0,0,0.15);transition:all .2s} nav a:hover{background:#facc15;color:white;transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,0.25)}
+.hero{background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('toiture1.jpg');background-size:cover;background-position:center;color:#fff;padding:140px 0}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h2{font-size:2.8rem;margin-bottom:20px;line-height:1.15}
+.hero p{margin-bottom:25px;color:#eee}
+.eyebrow{text-transform:uppercase;font-size:.8rem;letter-spacing:3px;color:#ddd;margin-bottom:10px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 22px;border-radius:14px;font-weight:bold;display:inline-block;text-decoration:none}
+.btn-primary{background:#16a34a;color:#ffffff;font-weight:bold;box-shadow:0 6px 14px rgba(0,0,0,0.25);transition:all .2s} .btn-primary:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 20px rgba(0,0,0,0.35)} .btn-outline:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 20px rgba(0,0,0,0.35)} .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 12px 28px rgba(0,0,0,0.4)}
+.btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
+.hero-image img{width:100%;border-radius:18px;box-shadow:0 15px 35px rgba(0,0,0,.35);object-fit:cover;min-height:360px}
+section{padding:80px 0}
+.section-tag{text-transform:uppercase;font-size:.8rem;letter-spacing:3px;color:#6b21a8;font-weight:bold;margin-bottom:10px}
+.section-title{font-size:2.2rem;margin-bottom:15px}
+.section-text{color:#555;max-width:800px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.card{background:#fff;border:1px solid #eee;border-radius:20px;padding:25px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
+.card ul{padding-left:18px;color:#555}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.service-box{background:#fff;border:1px solid #eee;border-radius:20px;padding:24px;transition:.2s}
+.service-box:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.service-box h3{margin-bottom:10px;color:#6b21a8}
+.service-box p{color:#555}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.gallery-item{overflow:hidden;border-radius:20px;position:relative;min-height:300px;background:#eee}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:18px;background:linear-gradient(to top,rgba(0,0,0,.75),transparent);color:#fff;font-weight:bold}
+.before-after-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.before-after-card{background:#fff;border:1px solid #eee;border-radius:20px;padding:18px;box-shadow:0 8px 18px rgba(0,0,0,.05)}
+.before-after-card h4{color:#6b21a8;margin-bottom:12px}
+.before-after-images{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.before-after-images .gallery-item{min-height:240px}
+.reviews{background:#f6f6fb}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:30px}
+.review{background:#fff;padding:22px;border-radius:18px;border:1px solid #eee;box-shadow:0 8px 18px rgba(0,0,0,.05)}
+.review strong{color:#6b21a8}.stars{color:#fbbf24;font-size:1.2rem;margin-bottom:10px}
+.contact{background:#111;color:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-buttons{display:flex;gap:14px;margin-top:25px;flex-wrap:wrap}.contact p{color:#ddd}
+form{background:#fff;color:#111;padding:28px;border-radius:20px}
+.field{margin-bottom:15px}label{display:block;margin-bottom:6px;font-weight:bold}input,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;font-family:inherit}textarea{min-height:120px}.submit-btn{width:100%;background:#6b21a8;color:#fff;border:none;padding:14px;border-radius:12px;font-weight:bold;cursor:pointer}
+footer{background:#fff;border-top:1px solid #eee;padding:22px 0;color:#666}.footer-wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:999px;font-weight:bold;box-shadow:0 15px 30px rgba(0,0,0,.3);text-decoration:none}
+@media(max-width:900px){.hero-grid,.about-grid,.contact-grid,.before-after-grid{grid-template-columns:1fr}.services-grid,.gallery-grid,.review-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){nav{display:none}.services-grid,.gallery-grid,.review-grid,.before-after-images{grid-template-columns:1fr}.hero h2{font-size:2rem}}
+</style>
+</head>
+<body>
+<header>
+<div class="container header-wrap">
+<div class="logo">
+<div style="width:420px;height:120px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+<img src="logo-inaya.png" alt="Logo INAYA services SRL" style="width:420px;height:auto;display:block;object-fit:contain;">
+</div>
+</div>
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#apropos">À propos</a>
+<a href="#services">Services</a>
+<a href="#galerie">Réalisations</a>
+<a href="#avis">Avis</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="accueil">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Toiture • Façade • Rénovation • Bâtiment</div>
+<h2>Tous travaux de bâtiment : Toitures - Façade - Rénovation intérieur - Démolition - Démenagement - Traitement Amiante</h2>
+<p>INAYA services SRL réalise vos travaux avec sérieux, précision et finitions professionnelles à Wallonie, la Flandre et Luxembourg. Contact rapide, devis gratuit et intervention soignée.</p>
+<div class="buttons">
+<a class="btn btn-primary" href="#contact">Demander un devis gratuit</a>
+<a class="btn btn-outline" href="https://wa.me/32486273699" target="_blank">WhatsApp direct</a>
+</div>
+</div>
+<div class="hero-image">
+<img src="toiture1.jpg" alt="Travaux de toiture" />
+</div>
+</div>
+</section>
+
+<section id="apropos">
+<div class="container about-grid">
+<div>
+<div class="section-tag">À propos</div>
+<h2 class="section-title">Une entreprise sérieuse pour vos travaux</h2>
+<p class="section-text" style="margin-bottom:15px">INAYA services SRL accompagne les particuliers et professionnels pour leurs travaux de toiture, façade, rénovation intérieure, démolition, déménagement et autres travaux de bâtiment.</p>
+<p class="section-text">Notre objectif est simple : réaliser un travail solide, propre et durable pour valoriser votre habitation ou votre bâtiment.</p>
+</div>
+<div class="card">
+<h3 style="margin-bottom:15px">Pourquoi choisir INAYA services SRL ?</h3>
+<ul>
+<li>Devis gratuit</li>
+<li>Travail propre et rapide</li>
+<li>Entreprise basée à Wallonie, la Flandre et Luxembourg</li>
+<li>Contact rapide GSM / WhatsApp</li>
+<li>Travaux garantis</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="services" style="background:#fafafa">
+<div class="container">
+<div class="section-tag">Services</div>
+<h2 class="section-title">Nos services</h2>
+<p class="section-text">Une offre complète pour vos travaux de bâtiment, avec une présentation plus claire et plus professionnelle.</p>
+<div class="services-grid">
+<div class="service-box"><h3>Toitures</h3><p>Pose, rénovation, réparation et entretien de toitures avec un travail propre et durable.</p></div>
+<div class="service-box"><h3>Façade</h3><p>Rénovation, réparation et remise à neuf de façades pour protéger et valoriser votre bien.</p></div>
+<div class="service-box"><h3>Rénovation intérieure</h3><p>Travaux de gyproc, faux plafonds, peinture, carrelage, parquet et finitions soignées.</p></div>
+<div class="service-box"><h3>Démolition</h3><p>Petits travaux de démolition réalisés avec méthode, sécurité et évacuation propre du chantier.</p></div>
+<div class="service-box"><h3>Déménagement</h3><p>Service de déménagement rapide et organisé pour particuliers et professionnels.</p></div>
+<div class="service-box"><h3>Traitement amiante</h3><p>Interventions avec sérieux et précaution pour les travaux liés au traitement de matériaux amiantés.</p></div>
+</div>
+</div>
+</section>
+
+<section id="galerie">
+<div class="container">
+<div class="section-tag">Réalisations</div>
+<h2 class="section-title">Galerie professionnelle de nos chantiers</h2>
+<p class="section-text"></p>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="toiture1.jpg" alt="Toiture terminée"><div class="gallery-caption">Toiture terminée</div></div>
+<div class="gallery-item"><img src="toiture2.jpg" alt="Charpente en cours"><div class="gallery-caption">Charpente en cours</div></div>
+<div class="gallery-item"><img src="toiture3.jpg" alt="Préparation de toiture"><div class="gallery-caption">Préparation de toiture</div></div>
+<div class="gallery-item"><img src="toiture4.jpg" alt="Toiture moderne"><div class="gallery-caption">Toiture moderne</div></div>
+<div class="gallery-item"><img src="toiture5.jpg" alt="Pose de toiture"><div class="gallery-caption">Pose de toiture</div></div>
+<div class="gallery-item"><img src="toiture1.jpg" alt="Finition toiture"><div class="gallery-caption">Finition toiture</div></div>
+</div>
+
+<div class="card" style="margin-top:30px;">
+<h3 style="margin-bottom:10px;color:#6b21a8;">Avant / Après chantier</h3>
+<p class="section-text"></p>
+<div class="before-after-grid">
+<div class="before-after-card">
+<h4>Avant / Après - Chantier 1</h4>
+<div class="before-after-images">
+<div class="gallery-item"><img src="toiture2.jpg" alt="Avant chantier 1"><div class="gallery-caption">Avant</div></div>
+<div class="gallery-item"><img src="toiture5.jpg" alt="Après chantier 1"><div class="gallery-caption">Après</div></div>
+</div>
+</div>
+<div class="before-after-card">
+<h4>Avant / Après - Chantier 2</h4>
+<div class="before-after-images">
+<div class="gallery-item"><img src="toiture3.jpg" alt="Avant chantier 2"><div class="gallery-caption">Avant</div></div>
+<div class="gallery-item"><img src="toiture4.jpg" alt="Après chantier 2"><div class="gallery-caption">Après</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="reviews" id="avis">
+<div class="container">
+<div class="section-tag">Avis clients</div>
+<h2 class="section-title">Ce que disent nos clients</h2>
+<div class="review-grid">
+<div class="review"><div class="stars">★★★★★</div><p>Travail très propre sur notre toiture. L’équipe est sérieuse et rapide. Je recommande.</p><br><strong>— Marc Dupont</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>Entreprise très professionnelle. Les finitions sont parfaites et le chantier était propre.</p><br><strong>— Ahmed Benali</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>Excellent travail pour l’aménagement de notre grenier. Devis clair et respecté.</p><br><strong>— Julien Martin</strong></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container contact-grid">
+<div>
+<div class="section-tag" style="color:#9333ea">Contact</div>
+<h2 class="section-title" style="color:white">Contactez-nous</h2>
+<p><strong>Adresse :</strong> Wallonie, la Flandre et Luxembourg</p>
+<p><strong>GSM :</strong> <a href="tel:+32466206978" style="color:white;text-decoration:none;">+32 466 20 69 78</a></p>
+<p><strong>Email :</strong> Inaya.services.srl@gmail.com</p>
+<p><strong>TVA :</strong> 1025.145.785</p>
+<div class="contact-buttons">
+<a class="btn btn-primary" href="tel:+32466206978">Appeler</a>
+<a class="btn btn-outline" href="https://wa.me/32486273699" target="_blank">WhatsApp</a>
+</div>
+</div>
+<form id="contactForm">
+<h3>Formulaire de contact</h3>
+<div class="field"><label>Nom</label><input id="nom" required></div>
+<div class="field"><label>Téléphone</label><input id="telephone" required></div>
+<div class="field"><label>Email</label><input id="email" required></div>
+<div class="field"><label>Message</label><textarea id="message" required></textarea></div>
+<button class="submit-btn" type="submit">Envoyer</button>
+</form>
+</div>
+</section>
+
+<footer>
+<div class="container footer-wrap">
+<p>© INAYA services SRL – Travaux de bâtiment à Wallonie, la Flandre et Luxembourg</p>
+<p>GSM +32 466 20 69 78</p>
+</div>
+</footer>
+<a class="whatsapp-float" href="https://wa.me/32486273699" target="_blank">WhatsApp</a>
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();var nom=document.getElementById('nom').value;var tel=document.getElementById('telephone').value;var email=document.getElementById('email').value;var msg=document.getElementById('message').value;var sujet=encodeURIComponent('Demande de devis INAYA services SRL');var body=encodeURIComponent('Nom:'+nom+'\nTéléphone:'+tel+'\nEmail:'+email+'\n\nProjet:\n'+msg);window.location.href='mailto:Inaya.services.srl@gmail.com?subject='+sujet+'&body='+body;});
+</script>
+</body>
+</html>
