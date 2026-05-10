@@ -233,62 +233,250 @@ footer{background:#fff;border-top:1px solid #eee;padding:22px 0;color:#666}.foot
 <script>
 const translations = {
   fr: {
-    accueil:"Accueil", apropos:"À propos", services:"Services", galerie:"Réalisations", avis:"Avis", contact:"Contact",
+    nav:["Accueil","À propos","Services","Réalisations","Avis","Contact"],
+    eyebrow:"Toiture • Façade • Rénovation • Bâtiment",
     heroTitle:"Tous travaux de bâtiment : Toitures - Façade - Rénovation intérieur - Démolition - Démenagement - Traitement Amiante",
     heroText:"INAYA services SRL réalise vos travaux avec sérieux, précision et finitions professionnelles à Wallonie, la Flandre et Luxembourg. Contact rapide, devis gratuit et intervention soignée.",
-    devis:"Demander un devis gratuit",
+    quote:"Demander un devis gratuit",
+    whatsapp:"WhatsApp direct",
+
+    aboutTag:"À propos",
     aboutTitle:"Une entreprise sérieuse pour vos travaux",
+    aboutP1:"INAYA services SRL accompagne les particuliers et professionnels pour leurs travaux de toiture, façade, rénovation intérieure, démolition, déménagement et autres travaux de bâtiment.",
+    aboutP2:"Notre objectif est simple : réaliser un travail solide, propre et durable pour valoriser votre habitation ou votre bâtiment.",
+    why:"Pourquoi choisir INAYA services SRL ?",
+    whyList:["Devis gratuit","Travail propre et rapide","Entreprise basée à Wallonie, la Flandre et Luxembourg","Contact rapide GSM / WhatsApp","Travaux garantis"],
+
+    servicesTag:"Services",
     servicesTitle:"Nos services",
+    servicesText:"Une offre complète pour vos travaux de bâtiment, avec une présentation plus claire et plus professionnelle.",
+    serviceTitles:["Toitures","Façade","Rénovation intérieure","Démolition","Déménagement","Traitement amiante"],
+    serviceTexts:[
+      "Pose, rénovation, réparation et entretien de toitures avec un travail propre et durable.",
+      "Rénovation, réparation et remise à neuf de façades pour protéger et valoriser votre bien.",
+      "Travaux de gyproc, faux plafonds, peinture, carrelage, parquet et finitions soignées.",
+      "Petits travaux de démolition réalisés avec méthode, sécurité et évacuation propre du chantier.",
+      "Service de déménagement rapide et organisé pour particuliers et professionnels.",
+      "Interventions avec sérieux et précaution pour les travaux liés au traitement de matériaux amiantés."
+    ],
+
+    galleryTag:"Réalisations",
+    galleryTitle:"Galerie professionnelle de nos chantiers",
+    captions:["Toiture terminée","Charpente en cours","Préparation de toiture","Toiture moderne","Pose de toiture","Finition toiture"],
+    beforeAfter:"Avant / Après chantier",
+    chantier1:"Avant / Après - Chantier 1",
+    chantier2:"Avant / Après - Chantier 2",
+    before:"Avant",
+    after:"Après",
+
+    reviewsTag:"Avis clients",
+    reviewsTitle:"Ce que disent nos clients",
+    reviews:[
+      "Travail très propre sur notre toiture. L’équipe est sérieuse et rapide. Je recommande.",
+      "Entreprise très professionnelle. Les finitions sont parfaites et le chantier était propre.",
+      "Excellent travail pour l’aménagement de notre grenier. Devis clair et respecté."
+    ],
+
+    contactTag:"Contact",
     contactTitle:"Contactez-nous",
+    address:"Adresse :",
+    phone:"GSM :",
+    email:"Email :",
+    vat:"TVA :",
+    call:"Appeler",
+    whatsappBtn:"WhatsApp",
     formTitle:"Formulaire de contact",
-    send:"Envoyer"
+    name:"Nom",
+    telephone:"Téléphone",
+    message:"Message",
+    send:"Envoyer",
+    footer:"© INAYA services SRL – Travaux de bâtiment à Wallonie, la Flandre et Luxembourg"
   },
+
   nl: {
-    accueil:"Startpagina", apropos:"Over ons", services:"Diensten", galerie:"Realisaties", avis:"Reviews", contact:"Contact",
-    heroTitle:"Alle bouwwerken: Daken - Gevels - Binnenrenovatie - Afbraak - Verhuizing - Asbestbehandeling",
+    nav:["Startpagina","Over ons","Diensten","Realisaties","Reviews","Contact"],
+    eyebrow:"Dakwerken • Gevels • Renovatie • Bouw",
+    heroTitle:"Alle bouwwerken: Dakwerken - Gevels - Binnenrenovatie - Afbraak - Verhuizing - Asbestbehandeling",
     heroText:"INAYA services SRL voert uw werken uit met ernst, precisie en professionele afwerking in Wallonië, Vlaanderen en Luxemburg. Snelle contactname, gratis offerte en verzorgde interventie.",
-    devis:"Gratis offerte aanvragen",
+    quote:"Gratis offerte aanvragen",
+    whatsapp:"Direct WhatsApp",
+
+    aboutTag:"Over ons",
     aboutTitle:"Een betrouwbaar bedrijf voor uw werken",
+    aboutP1:"INAYA services SRL begeleidt particulieren en professionals bij dakwerken, gevelwerken, binnenrenovatie, afbraak, verhuizing en andere bouwwerken.",
+    aboutP2:"Ons doel is eenvoudig: degelijk, proper en duurzaam werk leveren om uw woning of gebouw meer waarde te geven.",
+    why:"Waarom kiezen voor INAYA services SRL?",
+    whyList:["Gratis offerte","Proper en snel werk","Actief in Wallonië, Vlaanderen en Luxemburg","Snelle contactname via gsm / WhatsApp","Gegarandeerde werken"],
+
+    servicesTag:"Diensten",
     servicesTitle:"Onze diensten",
+    servicesText:"Een volledig aanbod voor uw bouwwerken, duidelijk en professioneel voorgesteld.",
+    serviceTitles:["Dakwerken","Gevels","Binnenrenovatie","Afbraak","Verhuizing","Asbestbehandeling"],
+    serviceTexts:[
+      "Plaatsing, renovatie, herstelling en onderhoud van daken met proper en duurzaam werk.",
+      "Renovatie, herstelling en vernieuwing van gevels om uw pand te beschermen en op te waarderen.",
+      "Gyprocwerken, valse plafonds, schilderwerken, betegeling, parket en verzorgde afwerking.",
+      "Kleine afbraakwerken uitgevoerd met methode, veiligheid en nette afvoer van het werfaval.",
+      "Snelle en georganiseerde verhuisservice voor particulieren en professionals.",
+      "Serieuze en voorzichtige interventies voor werken rond asbesthoudende materialen."
+    ],
+
+    galleryTag:"Realisaties",
+    galleryTitle:"Professionele galerij van onze werven",
+    captions:["Afgewerkt dak","Dakstructuur in uitvoering","Voorbereiding dakwerken","Modern dak","Plaatsing dak","Dakafwerking"],
+    beforeAfter:"Voor / Na werf",
+    chantier1:"Voor / Na - Werf 1",
+    chantier2:"Voor / Na - Werf 2",
+    before:"Voor",
+    after:"Na",
+
+    reviewsTag:"Klantbeoordelingen",
+    reviewsTitle:"Wat onze klanten zeggen",
+    reviews:[
+      "Zeer proper werk aan ons dak. Het team is serieus en snel. Ik raad hen aan.",
+      "Zeer professioneel bedrijf. De afwerking is perfect en de werf was proper.",
+      "Uitstekend werk voor de inrichting van onze zolder. Duidelijke offerte en correct nageleefd."
+    ],
+
+    contactTag:"Contact",
     contactTitle:"Contacteer ons",
+    address:"Adres :",
+    phone:"Gsm :",
+    email:"E-mail :",
+    vat:"BTW :",
+    call:"Bellen",
+    whatsappBtn:"WhatsApp",
     formTitle:"Contactformulier",
-    send:"Verzenden"
+    name:"Naam",
+    telephone:"Telefoon",
+    message:"Bericht",
+    send:"Verzenden",
+    footer:"© INAYA services SRL – Bouwwerken in Wallonië, Vlaanderen en Luxemburg"
   },
+
   en: {
-    accueil:"Home", apropos:"About", services:"Services", galerie:"Projects", avis:"Reviews", contact:"Contact",
+    nav:["Home","About","Services","Projects","Reviews","Contact"],
+    eyebrow:"Roofing • Facade • Renovation • Building",
     heroTitle:"All building works: Roofing - Facade - Interior renovation - Demolition - Moving - Asbestos treatment",
     heroText:"INAYA services SRL carries out your work with seriousness, precision and professional finishes in Wallonia, Flanders and Luxembourg. Fast contact, free quote and careful intervention.",
-    devis:"Request a free quote",
+    quote:"Request a free quote",
+    whatsapp:"Direct WhatsApp",
+
+    aboutTag:"About",
     aboutTitle:"A reliable company for your projects",
+    aboutP1:"INAYA services SRL supports individuals and professionals with roofing, facade work, interior renovation, demolition, moving and other building works.",
+    aboutP2:"Our goal is simple: to deliver solid, clean and durable work that adds value to your home or building.",
+    why:"Why choose INAYA services SRL?",
+    whyList:["Free quote","Clean and fast work","Company active in Wallonia, Flanders and Luxembourg","Fast contact by phone / WhatsApp","Guaranteed work"],
+
+    servicesTag:"Services",
     servicesTitle:"Our services",
+    servicesText:"A complete offer for your building works, presented clearly and professionally.",
+    serviceTitles:["Roofing","Facade","Interior renovation","Demolition","Moving","Asbestos treatment"],
+    serviceTexts:[
+      "Installation, renovation, repair and maintenance of roofs with clean and durable work.",
+      "Renovation, repair and refurbishment of facades to protect and enhance your property.",
+      "Gyproc work, false ceilings, painting, tiling, parquet flooring and careful finishes.",
+      "Small demolition works carried out with method, safety and clean site removal.",
+      "Fast and organized moving service for individuals and professionals.",
+      "Careful and serious interventions for works related to asbestos-containing materials."
+    ],
+
+    galleryTag:"Projects",
+    galleryTitle:"Professional gallery of our work sites",
+    captions:["Finished roof","Roof structure in progress","Roof preparation","Modern roof","Roof installation","Roof finishing"],
+    beforeAfter:"Before / After project",
+    chantier1:"Before / After - Project 1",
+    chantier2:"Before / After - Project 2",
+    before:"Before",
+    after:"After",
+
+    reviewsTag:"Customer reviews",
+    reviewsTitle:"What our customers say",
+    reviews:[
+      "Very clean work on our roof. The team is serious and fast. I recommend them.",
+      "Very professional company. The finishes are perfect and the work site was clean.",
+      "Excellent work on our attic conversion. Clear quote and respected price."
+    ],
+
+    contactTag:"Contact",
     contactTitle:"Contact us",
+    address:"Address:",
+    phone:"Phone:",
+    email:"Email:",
+    vat:"VAT:",
+    call:"Call",
+    whatsappBtn:"WhatsApp",
     formTitle:"Contact form",
-    send:"Send"
+    name:"Name",
+    telephone:"Phone",
+    message:"Message",
+    send:"Send",
+    footer:"© INAYA services SRL – Building works in Wallonia, Flanders and Luxembourg"
   }
 };
 
 function setLanguage(lang){
+  const t = translations[lang];
   document.documentElement.lang = lang;
   localStorage.setItem("siteLang", lang);
 
-  const t = translations[lang];
+  document.querySelectorAll("nav a").forEach((a,i)=>a.textContent=t.nav[i]);
 
-  document.querySelector('a[href="#accueil"]').textContent = t.accueil;
-  document.querySelector('a[href="#apropos"]').textContent = t.apropos;
-  document.querySelector('a[href="#services"]').textContent = t.services;
-  document.querySelector('a[href="#galerie"]').textContent = t.galerie;
-  document.querySelector('a[href="#avis"]').textContent = t.avis;
-  document.querySelector('a[href="#contact"]').textContent = t.contact;
+  document.querySelector(".eyebrow").textContent=t.eyebrow;
+  document.querySelector(".hero h2").textContent=t.heroTitle;
+  document.querySelector(".hero p").textContent=t.heroText;
+  document.querySelector('.hero .btn-primary').textContent=t.quote;
+  document.querySelector('.hero .btn-outline').textContent=t.whatsapp;
 
-  document.querySelector(".hero h2").textContent = t.heroTitle;
-  document.querySelector(".hero p").textContent = t.heroText;
-  document.querySelector(".btn-primary").textContent = t.devis;
+  document.querySelector("#apropos .section-tag").textContent=t.aboutTag;
+  document.querySelector("#apropos .section-title").textContent=t.aboutTitle;
+  document.querySelectorAll("#apropos .section-text")[0].textContent=t.aboutP1;
+  document.querySelectorAll("#apropos .section-text")[1].textContent=t.aboutP2;
+  document.querySelector("#apropos .card h3").textContent=t.why;
+  document.querySelectorAll("#apropos li").forEach((li,i)=>li.textContent=t.whyList[i]);
 
-  document.querySelector("#apropos .section-title").textContent = t.aboutTitle;
-  document.querySelector("#services .section-title").textContent = t.servicesTitle;
-  document.querySelector("#contact .section-title").textContent = t.contactTitle;
-  document.querySelector("form h3").textContent = t.formTitle;
-  document.querySelector(".submit-btn").textContent = t.send;
+  document.querySelector("#services .section-tag").textContent=t.servicesTag;
+  document.querySelector("#services .section-title").textContent=t.servicesTitle;
+  document.querySelector("#services .section-text").textContent=t.servicesText;
+  document.querySelectorAll(".service-box").forEach((box,i)=>{
+    box.querySelector("h3").textContent=t.serviceTitles[i];
+    box.querySelector("p").textContent=t.serviceTexts[i];
+  });
+
+  document.querySelector("#galerie .section-tag").textContent=t.galleryTag;
+  document.querySelector("#galerie .section-title").textContent=t.galleryTitle;
+  document.querySelectorAll("#galerie .gallery-grid .gallery-caption").forEach((c,i)=>c.textContent=t.captions[i]);
+  document.querySelector("#galerie .card h3").textContent=t.beforeAfter;
+  document.querySelectorAll(".before-after-card h4")[0].textContent=t.chantier1;
+  document.querySelectorAll(".before-after-card h4")[1].textContent=t.chantier2;
+  document.querySelectorAll(".before-after-images .gallery-caption").forEach((c,i)=>{
+    c.textContent = i % 2 === 0 ? t.before : t.after;
+  });
+
+  document.querySelector("#avis .section-tag").textContent=t.reviewsTag;
+  document.querySelector("#avis .section-title").textContent=t.reviewsTitle;
+  document.querySelectorAll(".review p").forEach((p,i)=>p.textContent=t.reviews[i]);
+
+  document.querySelector("#contact .section-tag").textContent=t.contactTag;
+  document.querySelector("#contact .section-title").textContent=t.contactTitle;
+  document.querySelectorAll("#contact p")[0].innerHTML=`<strong>${t.address}</strong> Wallonie, la Flandre et Luxembourg`;
+  document.querySelectorAll("#contact p")[1].innerHTML=`<strong>${t.phone}</strong> <a href="tel:+32466206978" style="color:white;text-decoration:none;">+32 466 20 69 78</a>`;
+  document.querySelectorAll("#contact p")[2].innerHTML=`<strong>${t.email}</strong> Inaya.services.srl@gmail.com`;
+  document.querySelectorAll("#contact p")[3].innerHTML=`<strong>${t.vat}</strong> 1025.145.785`;
+
+  document.querySelector("#contact .btn-primary").textContent=t.call;
+  document.querySelector("#contact .btn-outline").textContent=t.whatsappBtn;
+
+  document.querySelector("form h3").textContent=t.formTitle;
+  document.querySelectorAll("form label")[0].textContent=t.name;
+  document.querySelectorAll("form label")[1].textContent=t.telephone;
+  document.querySelectorAll("form label")[2].textContent=t.email.replace(":","");
+  document.querySelectorAll("form label")[3].textContent=t.message;
+  document.querySelector(".submit-btn").textContent=t.send;
+
+  document.querySelector("footer p").textContent=t.footer;
+  document.querySelector(".whatsapp-float").textContent="WhatsApp";
 }
 
 document.getElementById("languageSwitcher").addEventListener("change", function(){
