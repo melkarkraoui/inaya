@@ -80,6 +80,11 @@ footer{background:#fff;border-top:1px solid #eee;padding:22px 0;color:#666}.foot
 </div>
 </div>
 <nav>
+  <select id="languageSwitcher" style="padding:10px;border-radius:10px;font-weight:bold;">
+  <option value="fr">FR</option>
+  <option value="nl">NL</option>
+  <option value="en">EN</option>
+</select>
 <a href="#accueil">Accueil</a>
 <a href="#apropos">À propos</a>
 <a href="#services">Services</a>
@@ -226,7 +231,86 @@ footer{background:#fff;border-top:1px solid #eee;padding:22px 0;color:#666}.foot
 </footer>
 <a class="whatsapp-float" href="https://wa.me/32466206978" target="_blank">WhatsApp</a>
 <script>
-document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();var nom=document.getElementById('nom').value;var tel=document.getElementById('telephone').value;var email=document.getElementById('email').value;var msg=document.getElementById('message').value;var sujet=encodeURIComponent('Demande de devis INAYA services SRL');var body=encodeURIComponent('Nom:'+nom+'\nTéléphone:'+tel+'\nEmail:'+email+'\n\nProjet:\n'+msg);window.location.href='mailto:Inaya.services.srl@gmail.com?subject='+sujet+'&body='+body;});
+const translations = {
+  fr: {
+    accueil:"Accueil", apropos:"À propos", services:"Services", galerie:"Réalisations", avis:"Avis", contact:"Contact",
+    heroTitle:"Tous travaux de bâtiment : Toitures - Façade - Rénovation intérieur - Démolition - Démenagement - Traitement Amiante",
+    heroText:"INAYA services SRL réalise vos travaux avec sérieux, précision et finitions professionnelles à Wallonie, la Flandre et Luxembourg. Contact rapide, devis gratuit et intervention soignée.",
+    devis:"Demander un devis gratuit",
+    aboutTitle:"Une entreprise sérieuse pour vos travaux",
+    servicesTitle:"Nos services",
+    contactTitle:"Contactez-nous",
+    formTitle:"Formulaire de contact",
+    send:"Envoyer"
+  },
+  nl: {
+    accueil:"Startpagina", apropos:"Over ons", services:"Diensten", galerie:"Realisaties", avis:"Reviews", contact:"Contact",
+    heroTitle:"Alle bouwwerken: Daken - Gevels - Binnenrenovatie - Afbraak - Verhuizing - Asbestbehandeling",
+    heroText:"INAYA services SRL voert uw werken uit met ernst, precisie en professionele afwerking in Wallonië, Vlaanderen en Luxemburg. Snelle contactname, gratis offerte en verzorgde interventie.",
+    devis:"Gratis offerte aanvragen",
+    aboutTitle:"Een betrouwbaar bedrijf voor uw werken",
+    servicesTitle:"Onze diensten",
+    contactTitle:"Contacteer ons",
+    formTitle:"Contactformulier",
+    send:"Verzenden"
+  },
+  en: {
+    accueil:"Home", apropos:"About", services:"Services", galerie:"Projects", avis:"Reviews", contact:"Contact",
+    heroTitle:"All building works: Roofing - Facade - Interior renovation - Demolition - Moving - Asbestos treatment",
+    heroText:"INAYA services SRL carries out your work with seriousness, precision and professional finishes in Wallonia, Flanders and Luxembourg. Fast contact, free quote and careful intervention.",
+    devis:"Request a free quote",
+    aboutTitle:"A reliable company for your projects",
+    servicesTitle:"Our services",
+    contactTitle:"Contact us",
+    formTitle:"Contact form",
+    send:"Send"
+  }
+};
+
+function setLanguage(lang){
+  document.documentElement.lang = lang;
+  localStorage.setItem("siteLang", lang);
+
+  const t = translations[lang];
+
+  document.querySelector('a[href="#accueil"]').textContent = t.accueil;
+  document.querySelector('a[href="#apropos"]').textContent = t.apropos;
+  document.querySelector('a[href="#services"]').textContent = t.services;
+  document.querySelector('a[href="#galerie"]').textContent = t.galerie;
+  document.querySelector('a[href="#avis"]').textContent = t.avis;
+  document.querySelector('a[href="#contact"]').textContent = t.contact;
+
+  document.querySelector(".hero h2").textContent = t.heroTitle;
+  document.querySelector(".hero p").textContent = t.heroText;
+  document.querySelector(".btn-primary").textContent = t.devis;
+
+  document.querySelector("#apropos .section-title").textContent = t.aboutTitle;
+  document.querySelector("#services .section-title").textContent = t.servicesTitle;
+  document.querySelector("#contact .section-title").textContent = t.contactTitle;
+  document.querySelector("form h3").textContent = t.formTitle;
+  document.querySelector(".submit-btn").textContent = t.send;
+}
+
+document.getElementById("languageSwitcher").addEventListener("change", function(){
+  setLanguage(this.value);
+});
+
+const savedLang = localStorage.getItem("siteLang") || "fr";
+document.getElementById("languageSwitcher").value = savedLang;
+setLanguage(savedLang);
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var nom=document.getElementById('nom').value;
+  var tel=document.getElementById('telephone').value;
+  var email=document.getElementById('email').value;
+  var msg=document.getElementById('message').value;
+  var sujet=encodeURIComponent('Demande de devis INAYA services SRL');
+  var body=encodeURIComponent('Nom:'+nom+'\nTéléphone:'+tel+'\nEmail:'+email+'\n\nProjet:\n'+msg);
+  window.location.href='mailto:Inaya.services.srl@gmail.com?subject='+sujet+'&body='+body;
+});
 </script>
+//document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();var nom=document.getElementById('nom').value;var tel=document.getElementById('telephone').value;var email=document.getElementById('email').value;var msg=document.getElementById('message').value;var sujet=encodeURIComponent('Demande de devis INAYA services SRL');var body=encodeURIComponent('Nom:'+nom+'\nTéléphone:'+tel+'\nEmail:'+email+'\n\nProjet:\n'+msg);window.location.href='mailto:Inaya.services.srl@gmail.com?subject='+sujet+'&body='+body;});
+
 </body>
 </html>
